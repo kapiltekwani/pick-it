@@ -1,3 +1,22 @@
-// Place all the styles related to the home controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+body {
+  background-color: #563D7C;
+  color: #CDBFE3;
+}
+
+#nav {
+  top:40px;
+  margin-bottom: 80px;
+  position: relative;
+}
+
+#container{
+  top:150px;
+  margin: 80px;
+}
+
+.shirt{
+    background-color: rgba(185, 74, 72, 0.15);
+    border: 1px solid rgba(185, 74, 72, 0.2);
+    padding-bottom: 15px;
+    padding-top: 15px;
+}

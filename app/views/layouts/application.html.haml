@@ -1,0 +1,37 @@
+- content_for :navigation do
+  %ul.nav
+    - ['Home', 'About', 'Blog', 'Servive', 'Contact'].each do |opt|
+      %li
+        %a{:href => "#"}= opt
+    %li
+      %a{:href => "#"} Portofolio
+      %ul
+        - ['Webdesign', 'Development', 'App Design', 'Marketing'].each do |opt|
+          %li
+            %a{:href => "#"}= opt
+        %li
+          %a{:href => "#"} Identity
+          %ul
+            - 3.times do |i|
+              %li
+                %a{:href => "#"}= "Level #{i+1}"
+            %li
+              %a{:href => "#"} Level 2
+              %ul
+                - 3.times do |i|
+                  %li
+                    %a{:href => "#"}= "Level #{i+1}"
+
+!!!
+%html
+  %head
+    %title PickIt
+    = stylesheet_link_tag    "application", :media => "all"
+    = javascript_include_tag "application"
+    = csrf_meta_tags
+  %body
+  .container 
+    #nav
+      = yield(:navigation)
+    #container
+      = yield
